@@ -1,0 +1,36 @@
+ALGORITHM Problem_1
+
+ VAR
+
+  Set1 : ARRAY_OF INTEGER[];
+  Set2 : ARRAY_OF INTEGER[];
+  i,j,sum : INTEGER;
+  str, Affichage : string;
+
+  BEGIN
+
+   FOR i FROM 0 TO Set1.length DO
+       Read(Set1[i]);  // insert from user
+   END_FOR
+
+
+   FOR j FROM 0 TO Set2.length DO
+       Read(Set2[j]);  // insert from user
+   END_FOR
+
+  FOR i FROM 0 TO Set1.length DO
+   FOR j FROM 0 TO Set2.length DO
+
+    if (Set1[i] <> Set2[j] ) then
+    sum=sum+i+j;
+
+    Else if ( Set1[i] = Set2[j] )then
+    str = Set1[i].toString()
+    Affichage = Affichage.concat(", ", Set1[i]);
+    END_IF
+   END_FOR
+  END_FOR 
+ write (sum);
+ write (Affichage);
+
+End
