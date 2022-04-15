@@ -26,7 +26,7 @@ ALGORITHM Problem_1
 
     Else if ( Set1[i] = Set2[j] )then
     str = Set1[i].toString()
-    Affichage = Affichage.concat(", ", Set1[i]);
+    Affichage = Affichage.concat(", ", str);
     END_IF
    END_FOR
   END_FOR 

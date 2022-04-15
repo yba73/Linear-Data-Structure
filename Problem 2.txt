@@ -1,0 +1,37 @@
+ALGORITHM Problem_2
+
+ VAR
+
+  Set1 : HASH_TABLE<INTEGER,INTEGER>;
+  i,j,k,sum : INTEGER;
+  str, Affichage : String;
+
+  BEGIN
+
+   FOR i FROM 0 TO Set1.length-1 DO
+   begin
+    FOR i FROM 0 TO Set1.length-1 DO
+    begin
+       Read(Set1.insert(i,j));  // insert from user
+    END_FOR
+   END_FOR
+   
+
+
+
+  FOR j FROM 0 TO Set1.length-2 DO
+   FOR k FROM 1 TO Set2.length-1 DO
+
+    if (Set1[j] <> Set1[k] ) then
+    sum=sum+j+k;
+
+    Else if ( Set1[j] = Set1[k] )then
+    str = Set1[j].toString()
+    Affichage = Affichage.concat(", ", str);
+    END_IF
+   END_FOR
+  END_FOR 
+ write (sum);
+ write (Affichage);
+
+End
